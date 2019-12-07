@@ -21,6 +21,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [x] User cannot add an item with no text.
+* [x] Code has been restructured by making packages organized by category.
 
 ## Video Walkthrough
 
