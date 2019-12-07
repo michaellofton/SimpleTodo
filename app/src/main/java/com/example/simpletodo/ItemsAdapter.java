@@ -66,13 +66,13 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvItem;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvItem =  itemView.findViewById(android.R.id.text1);
         }
 
         // Update the view inside of the view holder with this data
-        public void bind(String item) {
+        void bind(String item) {
             tvItem.setText(item);
             tvItem.setOnClickListener(new View.OnClickListener() {
                 @Override
