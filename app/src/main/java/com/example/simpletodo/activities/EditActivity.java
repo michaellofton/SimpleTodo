@@ -1,13 +1,14 @@
-package com.example.simpletodo;
+package com.example.simpletodo.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.simpletodo.R;
 
 public class EditActivity extends AppCompatActivity {
 
@@ -24,9 +25,9 @@ public class EditActivity extends AppCompatActivity {
         etItem = findViewById(R.id.etItem);
         btnSave = findViewById(R.id.btnSave);
 
-        if (getSupportActionBar() != null)
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Edit Item");
-
+        }
 
         String retrievedItemText = getIntent().getStringExtra(MainActivity.KEY_ITEM_TEXT);
         etItem.setText(retrievedItemText);

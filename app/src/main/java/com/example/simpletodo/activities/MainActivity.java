@@ -1,4 +1,4 @@
-package com.example.simpletodo;
+package com.example.simpletodo.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.simpletodo.adapters.ItemsAdapter;
+import com.example.simpletodo.R;
 
 import org.apache.commons.io.FileUtils;
 
@@ -42,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         etItem = findViewById(R.id.etItem);
         rvItems = findViewById(R.id.rvItems);
-
-        loadItems();
 
         ItemsAdapter.OnLongClickListener onLongClickListener = new ItemsAdapter.OnLongClickListener() {
             @Override
@@ -120,10 +121,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private File getDataFile() {
-        return new File(getFilesDir(), "data.txt");
-    }
-
     // This function will load items by reading every line of the data file
     private void loadItems() {
         try {
@@ -141,6 +138,10 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             Log.e(TAG, "saveItems: Error writing items to file", e);
         }
+    }
+
+    private File getDataFile() {
+        return new File(getFilesDir(), "data.txt");
     }
 
 }

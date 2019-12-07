@@ -1,4 +1,4 @@
-package com.example.simpletodo;
+package com.example.simpletodo.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
